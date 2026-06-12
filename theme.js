@@ -8,7 +8,7 @@ function applyTheme(isDark) {
         document.querySelector('header').style.backgroundColor = 'rgb(22, 25, 32)';
 
         const intro = document.getElementById('intro');
-        if (intro) intro.style.backgroundImage = 'linear-gradient(rgba(146, 145, 145, 0.322), rgba(0, 0, 0, 0.44)), url(/img/main-Brno.jpg)';
+        if (intro) intro.style.backgroundImage = 'linear-gradient(rgba(146, 145, 145, 0.322), rgba(0, 0, 0, 0.44)), url(img/main-Brno.jpg)';
 
         const introH1 = document.querySelector('#intro h1');
         if (introH1) introH1.style.color = 'rgb(255, 255, 255)';
@@ -32,7 +32,7 @@ function applyTheme(isDark) {
         document.querySelector('header').style.backgroundColor = 'rgb(237, 232, 222)';
 
         const introEl = document.getElementById('intro');
-        if (introEl) introEl.style.backgroundImage = 'linear-gradient(rgba(146, 145, 145, 0.322), rgba(244, 241, 234, 0.441)), url(/img/main-Brno.jpg)';
+        if (introEl) introEl.style.backgroundImage = 'linear-gradient(rgba(146, 145, 145, 0.322), rgba(244, 241, 234, 0.441)), url(img/main-Brno.jpg)';
 
         const introH1 = document.querySelector('#intro h1');
         if (introH1) introH1.style.color = 'rgb(0, 0, 0)';
