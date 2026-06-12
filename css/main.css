@@ -1,6 +1,6 @@
 @font-face {        /*https://www.w3schools.com/css/css3_fonts.asp*/
     font-family: MagicYellow;
-    src: url(font/Magic\ Yellow.otf);
+    src: url(../font/Magic\ Yellow.otf);
 }
 
 header {
@@ -81,7 +81,7 @@ body {
 #intro {
     display: flex;
     height: 40vw;
-    background-image: linear-gradient(rgba(146, 145, 145, 0.322), rgba(244, 241, 234, 0.441)), url(img/main-Brno.jpg); /*https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html/*/
+    background-image: linear-gradient(rgba(146, 145, 145, 0.322), rgba(244, 241, 234, 0.441)), url(../img/main-Brno.jpg); /*https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html/*/
     background-size: 100%;
 }
 
