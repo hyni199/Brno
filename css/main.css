@@ -1,0 +1,355 @@
+@font-face {        /*https://www.w3schools.com/css/css3_fonts.asp*/
+    font-family: MagicYellow;
+    src: url(/font/Magic\ Yellow.otf);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    padding: 0.7vw;
+    height: 3vw;
+    background-color: rgb(237, 232, 222);
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.4); /* https://www.w3schools.com/css/css3_shadows_box.asp */
+}
+
+#logo {
+    padding-left: 2vw;
+    font-family: MagicYellow;
+    color: rgb(212, 176, 18);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(108, 104, 99);
+    display: inline-block;
+    padding: 1vw;
+    text-decoration: none;
+    position: relative;  /* ← WICHTIG: Neue Zeile! Ist für den Strich nötig*/
+}
+
+nav a:hover {
+    background-color: rgba(141, 135, 43, 0.167);
+    border-radius: 0.5vw;
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* Die Animation für den Strich ist mit KI! */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    background-color: rgb(212, 176, 18); 
+    transition: left 0.3s ease, right 0.3s ease;
+}
+
+nav a:hover::after {
+    left: 10%;
+    right: 10%;
+}
+
+/* Die Animation für den Button ist mit KI!*/
+#theme-button {
+    background: rgb(249, 248, 247);
+    border: 1px solid rgb(42, 46, 61);
+    border-radius: 20px;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-left: 1rem;
+}
+#theme-button:hover {
+    background: rgb(212, 176, 18);
+    transform: rotate(20deg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(237, 232, 222);
+}
+
+#intro {
+    display: flex;
+    height: 40vw;
+    background-image: linear-gradient(rgba(146, 145, 145, 0.322), rgba(244, 241, 234, 0.441)), url(/img/main-Brno.jpg); /*https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html/*/
+    background-size: 100%;
+}
+
+#intro h1{
+    font-size: 5vw;
+    padding: 8vw;
+}
+
+.intro-text {
+    padding: 0 20vw 2.5vw 20vw;
+    border-bottom: 1px solid rgb(72, 67, 59);
+}
+
+.h2-heading {
+    font-size: 3.5vw;
+    color: black;
+}
+
+.intro-text img {
+    width: 20vw;
+    height: auto;
+    float: right;       
+    padding: 0 1vw 0 1vw;
+    border-radius: 50px;
+}
+
+.intro-text p, .geschichte-item p, .wahrzeichen-item p, .touristen-item p, .aussichten-item p, .restaurant-text{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(108, 104, 99);
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    word-spacing: 1.5px;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.geschichte{
+    padding: 2.5vw 4vw 0 4vw;
+}
+
+.geschichte-item {
+    padding: 1vw 2vw 1vw 2vw;
+    border-left: 2px solid black;
+    line-height: 0.8;
+}
+
+.year {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: rgb(72, 67, 59);
+}
+
+.geschichte h3 {
+    color: black;
+}
+
+.wahrzeichen, .touristenattraktionen , .aussichten, .restaurant-item{
+    padding: 2vw 15vw 5vw 15vw;
+    border-bottom: 1px solid rgb(72, 67, 59);
+}
+
+/* macht das ich keine Border beim letzten Element habe*/
+.aussichten, .restaurant-item:last-child { 
+    border-bottom: none;
+}
+
+.wahrzeichen-item, .touristen-item, .aussichten-item{
+    display: flex;
+    padding: 5px 0 5px 0;
+}
+
+.wahrzeichen-item img, .touristen-item img, .aussichten-item img{
+    min-width: 355px;
+    width: 355px;
+    height: 200px;
+    margin: 0 2vw;
+    border-radius: 30px;
+}
+
+.wahrzeichen-item a, .touristen-item a , .aussichten-item a{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: whitesmoke;
+}
+
+.restaurant-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tags {
+    display: flex;
+    gap: 1vw;
+}
+
+.tags p {
+    text-align: center;
+    padding: 5px 6px 5px 6px;
+    border: 1px solid black;
+    border-radius: 100px;
+    background-color: white;
+}
+
+.restaurant-rating {
+    text-align: right;
+    font-size: 2vw;
+}
+
+.stars {
+    color: rgb(212, 176, 18);
+}
+
+.restaurant-extra {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    justify-content: center;
+}
+
+.restaurant-extra a {
+    text-decoration: none;
+}
+
+.interne-Links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 4vw 0 4vw 0;
+}
+
+.interne-Links a {
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid rgb(42 46 61);
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(42 46 61);
+    background-color: rgb(249, 248, 247);
+}
+
+.interne-Links a:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+footer {
+    font-size: 1.5vw;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1vw 0 2vw 0;
+    border-top: 1px solid rgb(72, 67, 59)
+}
+
+
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+        flex-direction: column;
+        padding: 3vw;
+        gap: 2vw;
+    }
+
+    #logo {
+        padding-left: 0;
+        font-size: 24px;
+    }
+
+    nav a {
+        padding: 2vw;
+        font-size: 14px;
+    }
+
+    #theme-button {
+        margin-left: 0;
+        margin-bottom: 2vw;
+    }
+
+    #intro {
+        height: 60vw;
+        background-size: cover;
+    }
+
+    #intro h1 {
+        font-size: 9vw;
+        padding: 10vw 5vw;
+    }
+
+    .intro-text {
+        padding: 0 5vw 5vw 5vw;
+    }
+
+    .h2-heading {
+        font-size: 8vw;
+    }
+
+    .intro-text img {
+        float: none;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .wahrzeichen, .touristenattraktionen, .aussichten, .restaurant-item {
+        padding: 4vw 5vw 8vw 5vw;
+    }
+
+    .wahrzeichen-item, .touristen-item, .aussichten-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wahrzeichen-item img, .touristen-item img, .aussichten-item img {
+        min-width: unset;
+        width: 100%;
+        height: auto;
+        margin: 0 0 2vw 0;
+        border-radius: 16px;
+    }
+
+    .wahrzeichen-item a, .touristen-item a, .aussichten-item a {
+        flex-direction: column;
+        height: auto;
+        border-radius: 16px;
+        width: 100%;
+    }
+
+    .restaurant-header {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    .restaurant-rating {
+        font-size: 5vw;
+        text-align: left;
+    }
+
+    .tags {
+        flex-wrap: wrap;
+        gap: 2vw;
+    }
+
+    .restaurant-extra {
+        flex-direction: column;
+        gap: 4vw;
+        align-items: flex-start;
+    }
+
+    .interne-Links {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 6vw 0;
+    }
+
+    .interne-Links a {
+        font-size: 16px;
+        width: 80%;
+        text-align: center;
+    }
+
+    footer {
+        font-size: 3.5vw;
+        padding: 3vw 4vw 5vw 4vw;
+    }
+}
